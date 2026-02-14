@@ -1,9 +1,0 @@
-{
-  "name": "hooks",
-  "description": "Claude Code hook creation skills. Guides setup of SessionStart hooks for web-based Claude Code sessions, including dependency installation and environment configuration.",
-  "version": "1.0.0",
-  "author": {
-    "name": "GivingThree"
-  },
-  "license": "UNLICENSED"
-}
