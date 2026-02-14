@@ -5,15 +5,15 @@
   },
   "plugins": [
     {
-      "name": "session-lifecycle",
-      "source": "./plugins/session-lifecycle",
-      "description": "Session start and close workflows — /shipit and /session-kickoff",
+      "name": "sesh",
+      "source": "./plugins/sesh",
+      "description": "Session start and close workflows — /pants (put your pants on, one leg at a time) and /shipit",
       "version": "1.0.0"
     },
     {
-      "name": "documentation",
-      "source": "./plugins/documentation",
-      "description": "Documentation helpers — /park (parking lot) and /help-update (in-app help)",
+      "name": "docs",
+      "source": "./plugins/docs",
+      "description": "Documentation helpers — /park (parking lot) and /help (in-app help updates)",
       "version": "1.0.0"
     },
     {
@@ -31,7 +31,7 @@
     {
       "name": "hooks",
       "source": "./plugins/hooks",
-      "description": "Claude Code hooks — /session-start-hook for web sessions",
+      "description": "Claude Code hooks — /session-start-hook creates automated shell scripts that run when remote sessions boot (dependency installs, env config). Distinct from /sesh:pants, which is a conversational session briefing.",
       "version": "1.0.0"
     }
   ]

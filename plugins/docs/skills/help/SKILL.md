@@ -1,6 +1,6 @@
 ---
 # ============================================================================
-# SKILL: /help-update
+# SKILL: /help
 # ============================================================================
 # PURPOSE:
 #   Update the in-app help system when user-facing features change.
@@ -19,21 +19,21 @@
 #   If no help system exists, reports that and exits.
 #
 # INVOCATION EXAMPLES:
-#   /help-update "Added bulk delete for appeals"
-#   /help-update "Calendar view now supports drag-to-reschedule"
-#   /help-update "Renamed 'Packages' to 'Donor Segments' throughout UI"
+#   /help "Added bulk delete for appeals"
+#   /help "Calendar view now supports drag-to-reschedule"
+#   /help "Renamed 'Packages' to 'Donor Segments' throughout UI"
 #
 # ARGUMENTS:
 #   $ARGUMENTS = description of what changed (used to guide the updates)
 # ============================================================================
-name: help-update
+name: help
 description: >
   Update the in-app help system with new or changed features. Edits articles,
   navigation, and the New Features changelog section.
 argument-hint: <feature-description>
 ---
 
-# Help Update — Maintain In-App Documentation
+# Help — Maintain In-App Documentation
 
 Update the help system to reflect: `$ARGUMENTS`
 
