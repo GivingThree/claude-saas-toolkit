@@ -1,0 +1,96 @@
+---
+# ============================================================================
+# SKILL: /session-kickoff
+# ============================================================================
+# PURPOSE:
+#   Start a coding session with full context. Reads the roadmap, parking lot,
+#   and CLAUDE.md, confirms the working branch, and presents a briefing so
+#   you can hit the ground running.
+#
+# WHEN TO USE:
+#   At the start of any coding session, before writing code.
+#
+# SCOPE:
+#   Cross-project. Works with any SaaS project that follows the standard
+#   docs/ structure and has a CLAUDE.md.
+#
+# INVOCATION:
+#   /session-kickoff                — full briefing
+#   /session-kickoff <issue-desc>   — briefing focused on a specific task
+#
+# NOTE: disable-model-invocation prevents Claude from auto-triggering this.
+#   The user decides when to start a session.
+# ============================================================================
+name: session-kickoff
+description: >
+  Start a coding session — read roadmap, parking lot, confirm branch, review
+  context, and present a briefing.
+argument-hint: [task-description]
+disable-model-invocation: true
+---
+
+# Session Kickoff — Start a Coding Session
+
+Perform these steps in order to establish full context before coding begins.
+
+---
+
+## Step 1: Read Project Context
+
+Read these files (skip any that don't exist):
+
+1. `CLAUDE.md` — Project conventions, tech stack, architecture patterns
+2. `docs/ROADMAP.md` — Current state of planned work, phases, priorities
+3. `docs/PARKING_LOT.md` — Unresolved items from previous sessions
+
+---
+
+## Step 2: Confirm the Branch
+
+1. Run `git status` to check the current branch and working tree state.
+2. Run `git log --oneline -5` to see recent commits for context.
+3. If there are uncommitted changes from a previous session, **alert the user**
+   before proceeding. Do not discard them.
+4. Confirm the branch name matches what's expected for the task. If the task
+   description specifies a branch, switch to it (or create it).
+
+---
+
+## Step 3: Review Task Context
+
+If `$ARGUMENTS` was provided, use it as the task description:
+
+1. Search the roadmap for related items.
+2. Search the parking lot for related items.
+3. Identify which files are most likely to be touched.
+
+If no arguments were provided, present the roadmap and parking lot summaries
+and ask the user what they'd like to work on.
+
+---
+
+## Step 4: Present Briefing
+
+Deliver a concise briefing:
+
+```
+## Session Briefing
+
+### Branch
+`<branch-name>` — [clean | N uncommitted changes]
+
+### Task
+<task description or "Awaiting direction">
+
+### Roadmap Context
+- [Relevant roadmap items, current phase, related work]
+
+### Parked Items
+- [Any parking lot items related to this task, or "None related"]
+
+### Key Files
+- [Files likely to be involved, based on task context]
+
+### Ready to go?
+[Any blockers, concerns, or suggestions before starting]
+```
