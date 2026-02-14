@@ -1,0 +1,9 @@
+{
+  "name": "code-quality",
+  "description": "Code quality and security review skills for multi-tenant SaaS applications. Covers auth checks, RLS verification, tenant isolation, XSS prevention, and pre-PR checklists.",
+  "version": "1.0.0",
+  "author": {
+    "name": "GivingThree"
+  },
+  "license": "UNLICENSED"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "claude-saas-toolkit",
+  "owner": {
+    "name": "GivingThree"
+  },
+  "plugins": [
+    {
+      "name": "session-lifecycle",
+      "source": "./plugins/session-lifecycle",
+      "description": "Session start and close workflows — /shipit and /session-kickoff",
+      "version": "1.0.0"
+    },
+    {
+      "name": "documentation",
+      "source": "./plugins/documentation",
+      "description": "Documentation helpers — /park (parking lot) and /help-update (in-app help)",
+      "version": "1.0.0"
+    },
+    {
+      "name": "code-quality",
+      "source": "./plugins/code-quality",
+      "description": "Code review and security — /security-review and /pr-ready",
+      "version": "1.0.0"
+    },
+    {
+      "name": "scaffolding",
+      "source": "./plugins/scaffolding",
+      "description": "Code generation — /api-scaffold and /migration",
+      "version": "1.0.0"
+    },
+    {
+      "name": "hooks",
+      "source": "./plugins/hooks",
+      "description": "Claude Code hooks — /session-start-hook for web sessions",
+      "version": "1.0.0"
+    }
+  ]
+}
