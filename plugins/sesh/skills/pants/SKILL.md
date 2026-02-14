@@ -1,11 +1,11 @@
 ---
 # ============================================================================
-# SKILL: /session-kickoff
+# SKILL: /pants
 # ============================================================================
 # PURPOSE:
 #   Start a coding session with full context. Reads the roadmap, parking lot,
 #   and CLAUDE.md, confirms the working branch, and presents a briefing so
-#   you can hit the ground running.
+#   you can hit the ground running. One leg at a time.
 #
 # WHEN TO USE:
 #   At the start of any coding session, before writing code.
@@ -15,21 +15,21 @@
 #   docs/ structure and has a CLAUDE.md.
 #
 # INVOCATION:
-#   /session-kickoff                — full briefing
-#   /session-kickoff <issue-desc>   — briefing focused on a specific task
+#   /pants                — full briefing
+#   /pants <issue-desc>   — briefing focused on a specific task
 #
 # NOTE: disable-model-invocation prevents Claude from auto-triggering this.
 #   The user decides when to start a session.
 # ============================================================================
-name: session-kickoff
+name: pants
 description: >
   Start a coding session — read roadmap, parking lot, confirm branch, review
-  context, and present a briefing.
+  context, and present a briefing. One leg at a time.
 argument-hint: [task-description]
 disable-model-invocation: true
 ---
 
-# Session Kickoff — Start a Coding Session
+# Pants — Start a Coding Session
 
 Perform these steps in order to establish full context before coding begins.
 

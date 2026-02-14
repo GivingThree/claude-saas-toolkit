@@ -3,6 +3,16 @@
 Private plugin marketplace for Claude Code. Contains reusable skills for
 multi-tenant SaaS development across all GivingThree projects.
 
+## Table of Contents
+
+- [Setup](#setup)
+- [Directory](#directory)
+- [Plugins](#plugins)
+- [Project Structure](#project-structure)
+- [Adding a New Skill](#adding-a-new-skill)
+- [Adding a New Plugin](#adding-a-new-plugin)
+- [Versioning](#versioning)
+
 ## Setup
 
 ```bash
@@ -10,53 +20,64 @@ multi-tenant SaaS development across all GivingThree projects.
 /plugin marketplace add GivingThree/claude-saas-toolkit
 
 # Install plugins
-/plugin install session-lifecycle
-/plugin install documentation
+/plugin install sesh
+/plugin install docs
 /plugin install code-quality
 /plugin install scaffolding
 /plugin install hooks
 ```
 
+## Directory
+
+| Short | Qualified | Purpose |
+|-------|-----------|---------|
+| `/pants` | `/sesh:pants` | Start a coding session — load context, confirm branch, present a briefing. One leg at a time. |
+| `/shipit` | `/sesh:shipit` | Close a session — commit, push, update roadmap, parking lot, help docs, and summarize. |
+| `/park` | `/docs:park` | Quick-add an item to `docs/PARKING_LOT.md` without breaking flow. |
+| `/help` | `/docs:help` | Update the in-app help system when user-facing features change. |
+| `/security-review` | `/code-quality:security-review` | Multi-tenant security audit checklist. |
+| `/pr-ready` | `/code-quality:pr-ready` | Pre-PR checklist — lint, build, docs, draft description. |
+| `/api-scaffold` | `/scaffolding:api-scaffold` | Generate an API route with auth, tenancy, and logging. |
+| `/migration` | `/scaffolding:migration` | Generate an idempotent database migration. |
+| `/session-start-hook` | `/hooks:session-start-hook` | Create a SessionStart hook script for remote web sessions (dependency installs, env config). |
+
 ## Plugins
 
-### session-lifecycle
+### sesh
 Session start and close workflows.
 
-| Skill | Purpose |
-|-------|---------|
-| `/session-lifecycle:shipit` | Close a session — commit, push, update docs, summarize |
-| `/session-lifecycle:session-kickoff` | Start a session — load context, confirm branch, brief |
+- `/pants` — Start a session with full context briefing
+- `/shipit` — Close a session cleanly and summarize what shipped
 
-### documentation
+### docs
 Documentation maintenance helpers.
 
-| Skill | Purpose |
-|-------|---------|
-| `/documentation:park` | Quick-add items to `docs/PARKING_LOT.md` |
-| `/documentation:help-update` | Update in-app help when features change |
+- `/park` — Quick-add items to `docs/PARKING_LOT.md`
+- `/help` — Update in-app help when features change
 
 ### code-quality
 Code review and security auditing.
 
-| Skill | Purpose |
-|-------|---------|
-| `/code-quality:security-review` | Multi-tenant security audit checklist |
-| `/code-quality:pr-ready` | Pre-PR checklist — lint, build, docs, draft description |
+- `/security-review` — Multi-tenant security audit checklist
+- `/pr-ready` — Pre-PR checklist — lint, build, docs, draft description
 
 ### scaffolding
 Code generation for Next.js + Supabase projects.
 
-| Skill | Purpose |
-|-------|---------|
-| `/scaffolding:api-scaffold` | Generate API route with auth, tenancy, logging |
-| `/scaffolding:migration` | Generate idempotent database migration |
+- `/api-scaffold` — Generate API route with auth, tenancy, logging
+- `/migration` — Generate idempotent database migration
 
 ### hooks
 Claude Code environment hooks.
 
-| Skill | Purpose |
-|-------|---------|
-| `/hooks:session-start-hook` | Set up SessionStart hooks for web sessions |
+- `/session-start-hook` — Set up SessionStart hooks for web sessions
+
+> **How is `/session-start-hook` different from `/pants`?**
+> `/pants` is a conversational briefing — it reads your roadmap, confirms your
+> branch, and presents context so you can start coding. `/session-start-hook`
+> creates an actual shell script that runs automatically when a remote session
+> boots — installing dependencies, configuring the environment, and ensuring
+> linters and tests work before you even type a prompt.
 
 ## Project Structure
 
@@ -65,8 +86,8 @@ claude-saas-toolkit/
 ├── .claude-plugin/
 │   └── marketplace.json        # Plugin catalog
 ├── plugins/
-│   ├── session-lifecycle/      # /shipit, /session-kickoff
-│   ├── documentation/          # /park, /help-update
+│   ├── sesh/                   # /pants, /shipit
+│   ├── docs/                   # /park, /help
 │   ├── code-quality/           # /security-review, /pr-ready
 │   ├── scaffolding/            # /api-scaffold, /migration
 │   └── hooks/                  # /session-start-hook

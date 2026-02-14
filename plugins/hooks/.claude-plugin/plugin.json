@@ -1,6 +1,6 @@
 {
   "name": "hooks",
-  "description": "Claude Code hook creation skills. Guides setup of SessionStart hooks for web-based Claude Code sessions, including dependency installation and environment configuration.",
+  "description": "Claude Code hook creation skills. Guides setup of SessionStart hooks for web-based Claude Code sessions, including dependency installation and environment configuration. Unlike /sesh:pants (which is a conversational briefing that reads your roadmap, confirms your branch, and presents context so you can start coding), /hooks:session-start-hook creates an actual shell script that runs automatically when a remote session boots — installing dependencies, configuring the environment, and ensuring linters and tests work before you even type a prompt.",
   "version": "1.0.0",
   "author": {
     "name": "GivingThree"
