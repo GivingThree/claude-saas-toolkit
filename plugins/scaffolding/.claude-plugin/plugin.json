@@ -1,9 +1,0 @@
-{
-  "name": "scaffolding",
-  "description": "Code scaffolding skills for Next.js + Supabase SaaS projects. Generates API routes with auth/tenancy/logging and idempotent database migrations.",
-  "version": "1.0.0",
-  "author": {
-    "name": "GivingThree"
-  },
-  "license": "UNLICENSED"
-}
