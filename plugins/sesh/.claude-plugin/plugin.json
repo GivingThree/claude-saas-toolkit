@@ -1,9 +1,0 @@
-{
-  "name": "sesh",
-  "description": "Session start and close workflows for multi-project SaaS development. Standardizes how coding sessions begin (context loading, branch confirmation) and end (commit, push, doc updates, summary).",
-  "version": "1.0.0",
-  "author": {
-    "name": "GivingThree"
-  },
-  "license": "UNLICENSED"
-}
