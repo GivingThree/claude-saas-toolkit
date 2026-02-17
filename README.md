@@ -38,6 +38,7 @@ to `~/.claude/skills/` instead.
 | `/api-scaffold` | Generate an API route with auth, tenancy, and logging. |
 | `/migration` | Generate an idempotent database migration. |
 | `/session-start-hook` | Create a SessionStart hook script for remote web sessions. |
+| `/claude-md` | Build or update a repo's CLAUDE.md — project context for effective sessions. |
 
 ## Skill Groups
 
@@ -56,6 +57,9 @@ to `~/.claude/skills/` instead.
 ### Scaffolding
 - `/api-scaffold` — Generate API route with auth, tenancy, logging
 - `/migration` — Generate idempotent database migration
+
+### Project setup
+- `/claude-md` — Build or update a repo's CLAUDE.md for effective Claude Code sessions
 
 ### Hooks
 - `/session-start-hook` — Set up SessionStart hooks for web sessions
@@ -81,7 +85,8 @@ claude-saas-toolkit/
 │       ├── pr-ready/SKILL.md
 │       ├── api-scaffold/SKILL.md
 │       ├── migration/SKILL.md
-│       └── session-start-hook/SKILL.md
+│       ├── session-start-hook/SKILL.md
+│       └── claude-md/SKILL.md
 └── README.md
 ```
 
