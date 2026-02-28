@@ -1,31 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /security-review
-# ============================================================================
-# PURPOSE:
-#   Run a structured security review for multi-tenant SaaS applications.
-#   Checks for common vulnerabilities: missing auth, broken tenant isolation,
-#   SQL injection, XSS, exposed secrets, and more.
-#
-# WHEN TO USE:
-#   - Before merging a feature branch
-#   - After adding or modifying API routes
-#   - After changing database queries or RLS policies
-#   - When touching auth, middleware, or permission logic
-#   - Periodic audit of existing code
-#
-# SCOPE:
-#   Cross-project. Designed for Next.js + Supabase multi-tenant SaaS apps.
-#   Adapts to the specific project's auth patterns by reading CLAUDE.md.
-#
-# INVOCATION:
-#   /security-review              — full audit of changed files on branch
-#   /security-review app/api/     — audit a specific directory
-#   /security-review --full       — audit the entire codebase (slow)
-#
-# NOTE: Runs in a forked context to avoid flooding the main conversation
-#   with audit output. Returns a summary report.
-# ============================================================================
 name: security-review
 description: >
   Run a multi-tenant SaaS security review checklist. Use when reviewing API
