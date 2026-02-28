@@ -1,6 +1,6 @@
 ---
-name: startup-hook-skill
-description: Creating and developing startup hooks for Claude Code on the web. Use when the user wants to set up a repository for Claude Code on the web, create a SessionStart hook to ensure their project can run tests and linters during web sessions.
+name: session-start-hook
+description: Create a SessionStart hook for Claude Code on the web. Use when setting up a repository for web sessions or creating a hook to install dependencies so tests and linters work.
 ---
 
 # Startup Hook Skill for Claude Code on the web
