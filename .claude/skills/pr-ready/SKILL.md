@@ -1,28 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /pr-ready
-# ============================================================================
-# PURPOSE:
-#   Prepare the current branch for a pull request. Reviews all changes,
-#   runs lint/build checks, verifies documentation is up to date, and
-#   drafts a PR description — all before you create the PR.
-#
-# WHEN TO USE:
-#   - Before creating a pull request
-#   - Before asking for code review
-#   - As a pre-merge sanity check
-#
-# SCOPE:
-#   Cross-project. Works with any git repo that has a build/lint pipeline.
-#   Reads CLAUDE.md and package.json to find available check commands.
-#
-# INVOCATION:
-#   /pr-ready             — full pre-PR checklist
-#   /pr-ready --draft     — skip checks, just draft the PR description
-#
-# NOTE: disable-model-invocation because this has side effects (running
-#   build commands) that the user should control.
-# ============================================================================
 name: pr-ready
 description: >
   Prepare the current branch for a pull request — review changes, run checks,
