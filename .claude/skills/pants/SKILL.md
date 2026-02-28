@@ -1,26 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /pants
-# ============================================================================
-# PURPOSE:
-#   Start a coding session with full context. Reads the roadmap, parking lot,
-#   and CLAUDE.md, confirms the working branch, and presents a briefing so
-#   you can hit the ground running. One leg at a time.
-#
-# WHEN TO USE:
-#   At the start of any coding session, before writing code.
-#
-# SCOPE:
-#   Cross-project. Works with any SaaS project that follows the standard
-#   docs/ structure and has a CLAUDE.md.
-#
-# INVOCATION:
-#   /pants                — full briefing
-#   /pants <issue-desc>   — briefing focused on a specific task
-#
-# NOTE: disable-model-invocation prevents Claude from auto-triggering this.
-#   The user decides when to start a session.
-# ============================================================================
 name: pants
 description: >
   Start a coding session — read roadmap, parking lot, confirm branch, review
