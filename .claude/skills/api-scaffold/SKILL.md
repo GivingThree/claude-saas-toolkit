@@ -1,31 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /api-scaffold
-# ============================================================================
-# PURPOSE:
-#   Scaffold a new Next.js App Router API route following project conventions.
-#   Generates GET and POST handlers with authentication, authorization,
-#   multi-tenant filtering, activity logging, error handling, and TypeScript
-#   types — all wired up and ready for business logic.
-#
-# WHEN TO USE:
-#   - Creating a new REST API endpoint
-#   - Adding CRUD operations for a new entity
-#   - Expanding an existing resource with new sub-routes
-#
-# SCOPE:
-#   Cross-project. Designed for Next.js 14+ App Router with Supabase.
-#   Reads CLAUDE.md to adapt to each project's specific import paths,
-#   auth function names, and database patterns.
-#
-# INVOCATION EXAMPLES:
-#   /api-scaffold donations          — creates app/api/donations/route.ts
-#   /api-scaffold donations/[id]     — creates app/api/donations/[id]/route.ts
-#   /api-scaffold campaigns/[id]/goals — nested resource route
-#
-# ARGUMENTS:
-#   $ARGUMENTS = the resource path relative to app/api/
-# ============================================================================
 name: api-scaffold
 description: >
   Scaffold a new Next.js API route following project conventions (auth,
