@@ -1,32 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /migration
-# ============================================================================
-# PURPOSE:
-#   Create a new database migration file following project conventions.
-#   Generates an idempotent, multi-org-safe SQL migration with proper
-#   structure: comment header, DO block, existence checks, RAISE NOTICE
-#   logging, change counting, and a verification query.
-#
-# WHEN TO USE:
-#   - Adding a new table, column, index, or constraint
-#   - Modifying RLS policies
-#   - Adding config/seed data to all organizations
-#   - Changing triggers or functions
-#
-# SCOPE:
-#   Cross-project. Designed for PostgreSQL + Supabase projects.
-#   Adapts to the project's migration directory location by checking
-#   CLAUDE.md or scanning for existing migrations.
-#
-# INVOCATION EXAMPLES:
-#   /migration add_donation_tracking     — creates the migration file
-#   /migration fix_rls_segments          — creates a fix migration
-#   /migration add_column_appeal_priority — column addition
-#
-# ARGUMENTS:
-#   $ARGUMENTS = descriptive name in snake_case (becomes the filename)
-# ============================================================================
 name: migration
 description: >
   Create a new database migration file following project conventions
