@@ -1,31 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /help
-# ============================================================================
-# PURPOSE:
-#   Update the in-app help system when user-facing features change.
-#   Handles article creation/editing, navigation updates, index registration,
-#   and the "New Features in This Version" changelog section.
-#
-# WHEN TO USE:
-#   - A new user-facing feature was added
-#   - UI terminology, labels, or navigation changed
-#   - Feature behavior changed in a way that affects user instructions
-#   - Also invoked as part of /shipit when user-facing changes are detected
-#
-# SCOPE:
-#   Cross-project. Adapts to the project's help system structure.
-#   Reads CLAUDE.md to find help system paths and conventions.
-#   If no help system exists, reports that and exits.
-#
-# INVOCATION EXAMPLES:
-#   /help "Added bulk delete for appeals"
-#   /help "Calendar view now supports drag-to-reschedule"
-#   /help "Renamed 'Packages' to 'Donor Segments' throughout UI"
-#
-# ARGUMENTS:
-#   $ARGUMENTS = description of what changed (used to guide the updates)
-# ============================================================================
 name: help
 description: >
   Update the in-app help system with new or changed features. Edits articles,
