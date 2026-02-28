@@ -1,26 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /shipit
-# ============================================================================
-# PURPOSE:
-#   Close out a coding session cleanly. Commits all work, pushes to remote,
-#   updates project documentation (roadmap, parking lot, help guide), and
-#   delivers a tight summary of what shipped.
-#
-# WHEN TO USE:
-#   When the user says "shipit", "ship it", or asks to close/wrap the session.
-#
-# SCOPE:
-#   Cross-project. Works with any SaaS project that follows the standard
-#   docs/ structure (ROADMAP.md, PARKING_LOT.md) and optional help system.
-#
-# INVOCATION:
-#   /shipit              — close the session with full checklist
-#   /shipit quick        — commit, push, and summarize only (skip doc updates)
-#
-# NOTE: disable-model-invocation prevents Claude from auto-triggering this.
-#   Only the user should decide when to ship.
-# ============================================================================
 name: shipit
 description: >
   Close out a coding session — commit, push, update roadmap, parking lot,
