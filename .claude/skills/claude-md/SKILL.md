@@ -1,31 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /claude-md
-# ============================================================================
-# PURPOSE:
-#   Build or update a CLAUDE.md file for any repository. Analyzes the codebase
-#   to produce a comprehensive, structured guide that gives Claude Code the
-#   context it needs to be effective — tech stack, architecture patterns,
-#   conventions, commands, and session guidelines.
-#
-# WHEN TO USE:
-#   - Setting up a new repo for Claude Code sessions
-#   - Updating CLAUDE.md after major changes (new auth system, migration to
-#     a new framework, restructured directories, etc.)
-#   - Auditing an existing CLAUDE.md for completeness or staleness
-#
-# SCOPE:
-#   Cross-project. Works with any codebase — SaaS, library, CLI tool, etc.
-#   Adapts output to match the actual project structure and tech stack.
-#
-# INVOCATION:
-#   /claude-md              — create or update CLAUDE.md for the current repo
-#   /claude-md audit        — review an existing CLAUDE.md for gaps
-#   /claude-md section <s>  — regenerate a specific section only
-#
-# ARGUMENTS:
-#   $ARGUMENTS = optional mode or section name
-# ============================================================================
 name: claude-md
 description: >
   Build or update a repo's CLAUDE.md — the project context file that makes
