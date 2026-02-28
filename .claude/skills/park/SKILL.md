@@ -1,36 +1,4 @@
 ---
-# ============================================================================
-# SKILL: /park
-# ============================================================================
-# PURPOSE:
-#   Quickly add an item to docs/PARKING_LOT.md without breaking flow.
-#   The parking lot is a lightweight holding area for bugs, ideas, and
-#   improvements discovered during coding sessions that don't belong on
-#   the current branch.
-#
-# WHEN TO USE:
-#   - You discover a bug unrelated to the current task
-#   - You spot a potential improvement or refactor opportunity
-#   - A feature idea comes up mid-session
-#   - You notice technical debt worth tracking
-#
-# SCOPE:
-#   Cross-project. Works with any project that has docs/PARKING_LOT.md.
-#
-# INVOCATION EXAMPLES:
-#   /park bug auth "Login fails silently when JWT expires mid-session"
-#   /park feature calendar "Add drag-to-reschedule on month view"
-#   /park debt api "Appeals route handler is 400+ lines, needs splitting"
-#   /park ux settings "Unsaved changes warning missing on tab switch"
-#
-# ARGUMENTS:
-#   $1 = category (bug|performance|feature|ux|devex|security|debt)
-#   $2 = related area (e.g., auth, calendar, api, kanban, settings)
-#   $3 = description (the item itself — one sentence)
-#
-# If the user provides a free-form description without structured args,
-# parse it intelligently and assign the best-fit category and area.
-# ============================================================================
 name: park
 description: >
   Add an item to docs/PARKING_LOT.md. Use when discovering bugs, improvements,
